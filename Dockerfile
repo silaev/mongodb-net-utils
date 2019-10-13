@@ -1,6 +1,6 @@
-ARG MONGO_VERSION=4.2.0
-FROM mongo:$MONGO_VERSION
+ARG DOCKER_TAG=4.0.10
+FROM mongo:$DOCKER_TAG
 RUN apt-get update && apt-get install -y nmap
-LABEL version=$MONGO_VERSION
+LABEL version=$DOCKER_TAG
 EXPOSE 27017
 CMD ["mongod"]
